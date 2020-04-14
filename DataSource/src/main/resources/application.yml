@@ -1,0 +1,29 @@
+server:
+  port: 9999
+
+
+
+spring:
+  application:
+    name: datasource
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost:3306/leyou?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    second:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/taotao?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: root
+
+logging:
+  level:
+    com.leyou: debug
+mybatis:
+  mapper-locations: mappers/**/*.xml  #指定mapper的文件的位置
+  type-aliases-package: com.leyou.item.entity   #别名
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名
+
